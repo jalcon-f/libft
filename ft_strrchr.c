@@ -6,7 +6,7 @@
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 20:59:08 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/01/30 21:17:49 by jalcon-f         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:55:12 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+
+/*int	main(void)
+{
+	char	*s = "Hola Mundo";
+	char	c;
+
+	c = 'e';
+	printf("Letra encontrada: %c\n", *ft_strrchr(s, c));
+	return (0);
+}*/

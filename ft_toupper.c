@@ -6,7 +6,7 @@
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 20:19:41 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/01/28 20:25:09 by jalcon-f         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:34:31 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,10 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
+
+/*int	main(void)
+{
+	char	c = 'b';
+	printf("%c", ft_toupper(c));
+	return (0);
+}*/

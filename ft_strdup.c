@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 18:11:35 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/02/17 12:59:29 by jalcon-f         ###   ########.fr       */
+/*   Created: 2024/02/03 07:08:40 by jalcon-f          #+#    #+#             */
+/*   Updated: 2024/02/10 00:26:08 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
+	char	*str;
+	size_t	i;
 
-/*int	main(void)
-{
-	int	testChar = '0xF1';
-	if (ft_isascii(testChar))
-	{
-		printf("%c esta dentro de ASCII. \n", testChar);
-	}
-	else
-	{
-		printf("%c no esta dentro de ASCII. \n", testChar);
-	}
-	return (0);
-}*/
+	i = 0;
+	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!s1)
+		return (NULL);
+	if (!str)
+		return (NULL);
+	while (*s1)
+		str[i++] = *s1++;
+	str[i] = 0;
+	return (str);
+}

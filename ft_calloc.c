@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 18:11:35 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/02/17 12:59:29 by jalcon-f         ###   ########.fr       */
+/*   Created: 2024/02/03 04:22:35 by jalcon-f          #+#    #+#             */
+/*   Updated: 2024/02/17 16:23:33 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
+	void	*ptr;
 
-/*int	main(void)
-{
-	int	testChar = '0xF1';
-	if (ft_isascii(testChar))
-	{
-		printf("%c esta dentro de ASCII. \n", testChar);
-	}
-	else
-	{
-		printf("%c no esta dentro de ASCII. \n", testChar);
-	}
-	return (0);
-}*/
+	ptr = malloc (count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, size * count);
+	return (ptr);
+}

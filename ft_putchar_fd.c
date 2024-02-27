@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 18:11:35 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/02/17 12:59:29 by jalcon-f         ###   ########.fr       */
+/*   Created: 2024/02/10 05:08:27 by jalcon-f          #+#    #+#             */
+/*   Updated: 2024/02/17 15:53:37 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	write(fd, &c, 1);
 }
 
 /*int	main(void)
 {
-	int	testChar = '0xF1';
-	if (ft_isascii(testChar))
-	{
-		printf("%c esta dentro de ASCII. \n", testChar);
-	}
-	else
-	{
-		printf("%c no esta dentro de ASCII. \n", testChar);
-	}
+	char	caracter = 'A';
+	int	salida = 1;
+	ft_putchar_fd(caracter, salida);
 	return (0);
 }*/

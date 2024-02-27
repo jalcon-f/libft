@@ -6,7 +6,7 @@
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 01:41:47 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/01/28 19:55:58 by jalcon-f         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:33:44 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (len + ft_strlen(src));
 }
+
+/*int	main(void)
+{
+	char	*src = ", el mejor";
+	char	dst[24] = "Jordi Alcon";
+	size_t	copied_len;
+
+	printf("Antes de la concatenacion: %s\n", dst);
+	copied_len = ft_strlcat(dst, src, sizeof(dst));
+	printf("Cadena concatenada: %s\n", dst);
+}*/

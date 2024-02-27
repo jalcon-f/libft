@@ -6,7 +6,7 @@
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 21:41:56 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/02/01 21:55:10 by jalcon-f         ###   ########.fr       */
+/*   Updated: 2024/02/17 14:31:37 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,14 @@ int	ft_atoi(const char *str)
 	}
 	return (resultado * signo);
 }
+
+/*int	main(void)
+{
+	const char	*str = "42 is the answer";
+
+	int resultado = ft_atoi(str);
+
+	printf("Resultado: %d\n", resultado);
+
+	return (0);
+}*/

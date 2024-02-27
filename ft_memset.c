@@ -6,7 +6,7 @@
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 21:25:32 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/01/22 20:03:31 by jalcon-f         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:05:27 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*Declaramos variable chh para almacenar el valor de 'c'*/
@@ -25,3 +25,17 @@ void	*ft_memset(void *b, int c, size_t len)
 		ptr[i++] = chh;
 	return (ptr);
 }
+
+/*int	main(void)
+{
+	char	espacio[20];
+	size_t	esp_buffer = sizeof(espacio);
+
+	printf("Contenido inicial en el buffer: %s\n", espacio);
+
+	ft_memset(espacio, 'A', esp_buffer);
+
+	printf("Contenido despues de ft_memset: %s\n", espacio);
+
+	return (0);
+}*/

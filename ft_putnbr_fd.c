@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcon-f <jalcon-f@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 18:11:35 by jalcon-f          #+#    #+#             */
-/*   Updated: 2024/02/17 12:59:29 by jalcon-f         ###   ########.fr       */
+/*   Created: 2024/02/10 05:46:57 by jalcon-f          #+#    #+#             */
+/*   Updated: 2024/02/17 16:13:56 by jalcon-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		if (n <= -10)
+			ft_putnbr_fd(n / -10, fd);
+		ft_putchar_fd(-(n % 10) + '0', fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd((n % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
 
 /*int	main(void)
 {
-	int	testChar = '0xF1';
-	if (ft_isascii(testChar))
-	{
-		printf("%c esta dentro de ASCII. \n", testChar);
-	}
-	else
-	{
-		printf("%c no esta dentro de ASCII. \n", testChar);
-	}
+	int	numero = 1234;
+	int	salida = 1;
+	ft_putnbr_fd(numero, salida);
 	return (0);
 }*/
